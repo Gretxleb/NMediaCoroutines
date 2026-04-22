@@ -1,8 +1,13 @@
+package ru.netology.nmedia
+
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
+import ru.netology.nmedia.api.PostsApi
+import ru.netology.nmedia.dto.PostWithAuthor
+import ru.netology.nmedia.dto.CommentWithAuthor
 
 fun main() = runBlocking {
-    val api = ApiFactory.api
+    val api = PostsApi.service
     val time = measureTimeMillis {
         val posts = api.getPosts()
         val result = posts.map { post ->
