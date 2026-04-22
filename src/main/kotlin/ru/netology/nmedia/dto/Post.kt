@@ -1,6 +1,7 @@
-data class Comment(
+package ru.netology.nmedia.dto
+
+data class Post(
     val id: Long,
-    val postId: Long,
     val authorId: Long,
     val content: String,
     val published: Long,
